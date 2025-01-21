@@ -226,4 +226,7 @@ public class EventHandler {
     protected void onGroupMsgReceive(GroupMsgReceiveEvent event) {
 
     }
+    protected void onInteractionCreate(InteractionCreateEvent event) {
+
+    }
 }
