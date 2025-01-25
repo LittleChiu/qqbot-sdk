@@ -244,6 +244,7 @@ public class MessageApi extends BaseApi {
     public Message sendGroupMessage(String groupOpenId, MessageMarkdown markdown) {
         Map<String, Object> data = new HashMap<>();
         data.put("markdown", markdown);
+        data.put("msg_type",2);
         return sendGroupMessage(groupOpenId, data);
     }
 
@@ -253,6 +254,7 @@ public class MessageApi extends BaseApi {
     public Message sendGroupMessage(String groupOpenId, MessageMarkdown markdown, MessageKeyboard keyboard) {
         Map<String, Object> data = new HashMap<>();
         data.put("markdown", markdown);
+        data.put("msg_type",2);
         data.put("keyboard", keyboard);
         return sendGroupMessage(groupOpenId, data);
     }
