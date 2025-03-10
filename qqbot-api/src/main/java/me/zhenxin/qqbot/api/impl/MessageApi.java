@@ -248,6 +248,16 @@ public class MessageApi extends BaseApi {
         data.put("msg_type",2);
         return sendGroupMessage(groupOpenId, data);
     }
+    /**
+     * 发送群聊Markdown消息用于回复
+     */
+    public Message sendGroupMessage(String groupOpenId, MessageMarkdown markdown,String messageId) {
+        Map<String, Object> data = new HashMap<>();
+        data.put("markdown", markdown);
+        data.put("msg_type",2);
+        data.put("msg_id", messageId);
+        return sendGroupMessage(groupOpenId, data);
+    }
 
     /**
      * 发送群聊按钮消息
